@@ -38,22 +38,28 @@ map.locate({setView: true, maxZoom: 15});
 var points = [];
 
 
-// Layer Groups
-
 // Stillness locations
 var paccar = L.marker([47.6591, -122.3086]).bindPopup('Paccar Hall');
     grieg = L.marker([47.6562, -122.3066]).bindPopup('Grieg Garden');
     sakuma = L.marker([47.651838, -122.314841]).bindPopup('Sakuma Viewpoint');
     horticulture = L.marker([47.658474, -122.289997]).bindPopup('Center for Urban Horticulture');
 
-// Layer group for stillness
+// Creativity Locations 
+var skyspace = L.marker([47.657028, -122.311777]).bindPopup('Henry Art Gallery Skyspace');
+    ecc = L.marker([47.655312, -122.314805]).bindPopup('Ethnic Cultural Center');
+    wallDeath = L.marker([47.655225, -122.318511]).bindPopup('Wall of Death');
+    parnassus = L.marker([47.658391, -122.306556]).bindPopup('Parnassus Art Gallery Cafe');
+
+// Layer groups
 var stillness = L.layerGroup([paccar, grieg, sakuma, horticulture]);
+var creativity = L.layerGroup([skyspace, ecc, wallDeath, parnassus]);
 
 
 
 // objects for the layers
 var overlayMaps = {
-    "Stillness": stillness
+    "Stillness": stillness,
+    "Creativity": creativity
 };
 
 
