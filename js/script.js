@@ -54,8 +54,6 @@ var skyspace = L.marker([47.657028, -122.311777]).bindPopup('Henry Art Gallery S
 var stillness = L.layerGroup([paccar, grieg, sakuma, horticulture]);
 var creativity = L.layerGroup([skyspace, ecc, wallDeath, parnassus]);
 
-
-
 // objects for the layers
 var overlayMaps = {
     "Stillness": stillness,
