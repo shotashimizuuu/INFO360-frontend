@@ -1,4 +1,4 @@
-var map = L.map('map').fitWorld();
+var map = L.map('map').setView([47.654, -122.31], 16);
 
 /*
 Initilizes the map
