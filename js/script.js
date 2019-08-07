@@ -1,4 +1,7 @@
-var map = L.map('map').setView([47.654, -122.31], 16);
+var map = L.map('map',{
+    center: [47.653839, -122.307809],
+    zoom: 15,
+});
 
 /*
 Initilizes the map
@@ -24,14 +27,34 @@ function onLocationFound(e) {
 
 // Shows error message when geolocation fails and sets default view to UW
 function onLocationError(e) {
-    alert(e.message);
-    map.setView([47.654, -122.31], 16);
+    map.setView([47.653839, -122.307809], 15);
 }
 
 map.on('locationfound', onLocationFound);
-map.on('locationerror', onLocationError);
 
-map.locate({setView: true, maxZoom: 16});
+
+map.locate({setView: true, maxZoom: 15});
 
 var points = [];
 
+
+// Layer Groups
+
+// Stillness locations
+var paccar = L.marker([47.6591, -122.3086]).bindPopup('Paccar Hall');
+    grieg = L.marker([47.6562, -122.3066]).bindPopup('Grieg Garden');
+    sakuma = L.marker([47.651838, -122.314841]).bindPopup('Sakuma Viewpoint');
+    horticulture = L.marker([47.658474, -122.289997]).bindPopup('Center for Urban Horticulture');
+
+// Layer group for stillness
+var stillness = L.layerGroup([paccar, grieg, sakuma, horticulture]);
+
+
+
+// objects for the layers
+var overlayMaps = {
+    "Stillness": stillness
+};
+
+
+L.control.layers(overlayMaps).addTo(map);
