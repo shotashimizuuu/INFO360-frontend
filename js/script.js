@@ -45,7 +45,8 @@ var paccar = L.marker([47.6591, -122.3086]).bindPopup('Paccar Hall');
     horticulture = L.marker([47.658474, -122.289997]).bindPopup('Center for Urban Horticulture');
 
 // Creativity Locations 
-var skyspace = L.marker([47.657028, -122.311777]).bindPopup('Henry Art Gallery Skyspace');
+var skyspace = L.marker([47.657028, -122.311777]).bindPopup
+                                                ('<h1>Henry Art Gallery Skyspace</h1> <h2>Practices</h2> <ul><li>Meditation</li><li>Put on your favorite playlist and look up at the sky</li></ul>');
     ecc = L.marker([47.655312, -122.314805]).bindPopup('Ethnic Cultural Center');
     wallDeath = L.marker([47.655225, -122.318511]).bindPopup('Wall of Death');
     parnassus = L.marker([47.658391, -122.306556]).bindPopup('Parnassus Art Gallery Cafe');
