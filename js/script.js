@@ -7,7 +7,7 @@ var map = L.map('map', {
 Initilizes the map
 (Note to front end team: This block is from map demo's source code)
 */
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoic2hvdGFzaGltaXp1dXUiLCJhIjoiY2p5b3FoZTFnMDByeDNscXRnZ2Y3bHdzeCJ9.vtZCutjwiUMaJ6rhD52J-Q', {
+L.tileLayer('https://api.mapbox.com/styles/v1/hshin8461/cjz1lqxdt6r7s1ckqntjk3i8i/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaHNoaW44NDYxIiwiYSI6ImNqejFrZzI5ZDAwMnozY21rNXRmejczbWQifQ.Or3sP6yGYc0VI2h8WdVyJg', {
 	maxZoom: 18,
 	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
 		'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
