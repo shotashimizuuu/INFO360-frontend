@@ -137,6 +137,25 @@ var quadDescription = ('<h1>Quad</h1>'+
 	'<ul><li>Take about three minutes and listen to your partner talk to you, then switch.</li></ul>'
 );
 
+// Movement
+var burkeDescription = ('<h1>Burke Gilman Trail</h1>' +
+	'<p>The Burke Gilman Trail is a 27 mile trail in the King County area for cycling, walking, running, and skateboarding. A significant chunk of the Burke Gilman Trail spans the Southern edge of central UW campus, which many students utilize as a part of their commute to school, or between classes. This is a good path to use when you want to move around.</p>' +
+	'<h2>Practices</h2>' +
+	'<ul><li>Walking Meditation</li></ul>'
+);
+var imaDescription = ('<h1>IMA</h1>' +
+	'<p>The intramural activity center (IMA) is a great place to stay active on campus. The IMA includes multiple gyms with exercise machines, weights, and matts, as well as a rock climbing wall, saunas, a pool, and a variety of classes taught by instructors. </p>' +
+	'<h2>Practices</h2>' +
+	'<ul><li>Climbing wall</li>' +
+	'<li>Inspire a healthy body and mind with a mindful yoga class</li></ul>'
+);
+var gamesDescription = ('<h1>HUB Games</h1>' +
+	'<p>HUB Games is located in the basement of the Husky Student Union Building. HUB Games features bowling, pool, video games, board games, and more. This is a great spot to have fun on campus!</p>' +
+	'<h2>Practices</h2>' +
+	'<ul><li>Go bowling, but as you roll your ball down the lane, strike a pose that mirrors your current emotion.</li>' +
+	'<li>Take a break to get up and stretch out your muscles, focusing on how each muscle feels.</li></ul>'
+);
+
 
 // Stillness Markers
 var paccar = L.marker([47.6591, -122.3086]).bindPopup(paccarDescription);
@@ -162,18 +181,26 @@ var intellectual = L.marker([47.658257, -122.304880]).bindPopup(intellectualDesc
 var rainierVista = L.marker([47.652026, -122.306600]).bindPopup(rainierVistaDescription);
 var quad = L.marker([47.657281, -122.307262]).bindPopup(quadDescription);
 
+// Movement Markers
+var burke = L.marker([47.654522, -122.302910]).bindPopup(burkeDescription);
+var ima = L.marker([47.653620, -122.301517]).bindPopup(imaDescription);
+var games = L.marker([47.655764, -122.304922]).bindPopup(gamesDescription);
+
+
 // Layer groups
 var stillness = L.layerGroup([paccar, grieg, sakuma, horticulture]);
 var creativity = L.layerGroup([skyspace, ecc, wallDeath, parnassus]);
 var generative = L.layerGroup([herbGarden, sylvan, dock, henry]);
 var relational = L.layerGroup([hub, intellectual, rainierVista, quad]);
+var movement = L.layerGroup([burke, ima, games, rainierVista]);
 
 // objects for the layers
 var overlayMaps = {
 	"Stillness": stillness,
     "Creativity": creativity,
 	"Generative": generative,
-	"Relational": relational
+	"Relational": relational,
+	"Movement" : movement
 };
 
 // Adds the layers to the map
