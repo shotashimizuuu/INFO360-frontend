@@ -112,6 +112,32 @@ var henryDescription = ('<h1>Henry Art Gallery</h1>' +
     '<li>Scent-imental contemplation</li></ul>'
 );
 
+// Relational 
+var hubDescription = ('<h1>HUB Lounge</h1>' +
+	'<p>Husky Union Building (HUB) is a place where University of Washington students, staff, faculty, and invited guests come to eat, chill, and study. HUB have diverse culture of food courts, event activities, gaming lounge, and fireplace lounge. Its mission is to enrich student engagement and cultural equality.</p>' +
+	'<h2>Practices</h2>' +
+	'<ul><li>Have a discussion with a group of people, being respectful and listening closely to each other\'s points.</li></ul>'
+);
+var intellectualDescription = ('<h1>Intellectual House</h1>' +
+	'<p>Intellectual House is located nearby North Campus. It provides American Indian and Alaska Native place for gathering space and a multi-service learning environment for everyone. This place is great for diverse cultures and communities to gather together for sharing knowledge.</p>' +
+	'<h2>Practices</h2>' +
+	'<ul><li>Have a discussion with a group of people, being respectful and listening closely to each other\'s points.</li>' +
+	'<li>Tell or listen to a 5 to 10 minute story.</li>' +
+	'<li>Build a story with others, using the “yes, and” improvisation strategy.</li>'
+);
+var rainierVistaDescription = ('<h1>Rainier Vista</h1>' +
+	'<p>Rainier Vista is an extended large lawn that can be seen a scenic views of Mount Rainier. It is also a great space for big events and activities. The location is the best to view the fountain and cherry blossom trees in the background during a clear day.</p>' +
+	'<h2>Practices</h2>' +
+	'<ul><li>Have a discussion with a group of people, being respectful and listening closely to each other\'s points. </li>' +
+	'<li>Take about three minutes and listen to your partner talk to you, then switch.</li></ul>'
+);
+var quadDescription = ('<h1>Quad</h1>'+
+	'<p>The Liberal Arts Quadrangle (a.k.a. The Quad) is a traditional school attraction. The quadrangle is surrounded by old fashioned buildings along with cherry blossom trees and fresh lawn. This place is great for tourists to visit, as well as students to chill and relax under the sun. </p>' +
+	'<h2>Practices</h2>' +
+	'<ul><li>Take about three minutes and listen to your partner talk to you, then switch.</li></ul>'
+);
+
+
 // Stillness Markers
 var paccar = L.marker([47.6591, -122.3086]).bindPopup(paccarDescription);
 grieg = L.marker([47.6562, -122.3066]).bindPopup(griegDescription);
@@ -130,16 +156,24 @@ var sylvan = L.marker([47.652705, -122.306400]).bindPopup(sylvanDescription);
 var dock = L.marker([47.652742, -122.299895]).bindPopup(dockDescription);
 var henry = L.marker([47.656149, -122.311776]).bindPopup(henryDescription);
 
+// Relational Markers
+var hub = L.marker([47.655764, -122.304922]).bindPopup(hubDescription);
+var intellectual = L.marker([47.658257, -122.304880]).bindPopup(intellectualDescription);
+var rainierVista = L.marker([47.652026, -122.306600]).bindPopup(rainierVistaDescription);
+var quad = L.marker([47.657281, -122.307262]).bindPopup(quadDescription);
+
 // Layer groups
 var stillness = L.layerGroup([paccar, grieg, sakuma, horticulture]);
 var creativity = L.layerGroup([skyspace, ecc, wallDeath, parnassus]);
 var generative = L.layerGroup([herbGarden, sylvan, dock, henry]);
+var relational = L.layerGroup([hub, intellectual, rainierVista, quad]);
 
 // objects for the layers
 var overlayMaps = {
 	"Stillness": stillness,
     "Creativity": creativity,
-    "Generative": generative
+	"Generative": generative,
+	"Relational": relational
 };
 
 // Adds the layers to the map
