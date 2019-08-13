@@ -3,6 +3,13 @@
 ## Overview
 
 For this project, we are developing a resource for undergraduate students at the University of Washington. The resource is a digital map of restorative places on UW's Seattle campus. We will be using [Leaflet](https://leafletjs.com/) to develop this map.
+
+## Members
+
+* Shota Shimizu
+* Chris Forbes
+* Erin Chang
+* Layne West
 - - - -
 ### Key features of this map include:
 * A map of UW Seattle
